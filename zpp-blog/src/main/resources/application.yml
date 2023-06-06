@@ -1,0 +1,42 @@
+server:
+  port: 7777
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  # 数据源的配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/sg_blog?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+  servlet:
+#    设置单个文件最大是5MB，总上传数据大小是20MB
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+  security:
+    user:
+      name: user
+      password: 123
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    # 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+#      逻辑删除字段配置
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+
+oss:
+  accessKey: ISCiJbE-md9PF9JQAfkiCUsBU8ffMAj8oGhUX06l
+  secretKey: uBMBwu5DLUpZzD6IA8Z34Mx8Q-Si6xidU366PqZa
+  bucket: zpp-blog
+  domainName: https://qny.hanxi.fun/

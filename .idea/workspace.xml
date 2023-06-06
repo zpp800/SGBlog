@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="30fd6cfc-ad88-4d02-ae6d-7cca0fb7f533" name="变更" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Interface" />
+        <option value="AnnotationType" />
+        <option value="Mybatis Mapper" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.4.3/mybatis-plus-extension-3.4.3-sources.jar!/com/baomidou/mybatisplus/extension/service/IService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/OssUploadService.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2MLRLyRXZ0AmPRBIvt4RmIYLCAd" />
+  <component name="ProjectViewState">
+    <option name="flattenModules" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable": "SELECTIVE",
+    "jdk.selected.JAVA_MODULE": "jdk1.8.0_271",
+    "last_opened_file_path": "C:/Users/zpp/Desktop/SpingBoot_算法/Spring boot/SpringBoot/demo1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.17126437",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.build.tools.auto.reload": "SELECTIVE",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "49e175025a33d7b23595fee791e7b853",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.zpp.domain.vo" />
+      <recent name="com.zpp.domain.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\idea\博客\Blog\zpp-framework\src\main\java\com\zpp\utils" />
+      <recent name="D:\idea\博客\Blog\zpp-framework\src\main\java\com\zpp\config" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zpp.filter" />
+      <recent name="com.zpp.config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BlogAdminApplication">
+    <configuration name="OSSTest.testOss" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zpp-blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zpp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zpp" />
+      <option name="MAIN_CLASS_NAME" value="com.zpp.OSSTest" />
+      <option name="METHOD_NAME" value="testOss" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zpp-admin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestController" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestController.list" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zpp-admin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestController" />
+      <option name="METHOD_NAME" value="list" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="zpp-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zpp.BlogAdminApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zpp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZppBlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="zpp-blog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zpp.ZppBlogApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zpp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.BlogAdminApplication" />
+        <item itemvalue="Spring Boot.ZppBlogApplication" />
+        <item itemvalue="JUnit.TestController.list" />
+        <item itemvalue="JUnit.TestController" />
+        <item itemvalue="JUnit.OSSTest.testOss" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="30fd6cfc-ad88-4d02-ae6d-7cca0fb7f533" name="变更" comment="" />
+      <created>1677544824564</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677544824564</updated>
+      <workItem from="1677544825768" duration="747000" />
+      <workItem from="1677545581687" duration="512000" />
+      <workItem from="1677546096763" duration="1912000" />
+      <workItem from="1677548221556" duration="368000" />
+      <workItem from="1677548615261" duration="10521000" />
+      <workItem from="1677564367039" duration="2412000" />
+      <workItem from="1677568606652" duration="277000" />
+      <workItem from="1677569176844" duration="8777000" />
+      <workItem from="1677654023765" duration="12164000" />
+      <workItem from="1677746670142" duration="937000" />
+      <workItem from="1677834157206" duration="4754000" />
+      <workItem from="1678000219804" duration="7050000" />
+      <workItem from="1678098020518" duration="22955000" />
+      <workItem from="1678265251357" duration="2510000" />
+      <workItem from="1678328634203" duration="5490000" />
+      <workItem from="1678350569788" duration="5039000" />
+      <workItem from="1678786990401" duration="100000" />
+      <workItem from="1678925697947" duration="5230000" />
+      <workItem from="1678931251671" duration="6551000" />
+      <workItem from="1678952261509" duration="10350000" />
+      <workItem from="1678963345039" duration="2052000" />
+      <workItem from="1679035177760" duration="2442000" />
+      <workItem from="1679122371064" duration="12222000" />
+      <workItem from="1679368863920" duration="1673000" />
+      <workItem from="1679379691943" duration="2330000" />
+      <workItem from="1679389096826" duration="2134000" />
+      <workItem from="1679397820786" duration="1166000" />
+      <workItem from="1679560336984" duration="28000" />
+      <workItem from="1679989879135" duration="82000" />
+      <workItem from="1680079244043" duration="31000" />
+      <workItem from="1680079284755" duration="208000" />
+      <workItem from="1680080389007" duration="3000" />
+      <workItem from="1680080397344" duration="616000" />
+      <workItem from="1680084159534" duration="5821000" />
+      <workItem from="1680140261085" duration="3369000" />
+      <workItem from="1681201756256" duration="1525000" />
+      <workItem from="1682232174222" duration="642000" />
+      <workItem from="1682393807075" duration="46000" />
+      <workItem from="1682416463067" duration="1207000" />
+      <workItem from="1682558606269" duration="359000" />
+      <workItem from="1682560579405" duration="1547000" />
+      <workItem from="1682579195341" duration="46000" />
+      <workItem from="1683344097928" duration="313000" />
+      <workItem from="1684681855372" duration="2900000" />
+      <workItem from="1684749252543" duration="1268000" />
+      <workItem from="1684830842258" duration="334000" />
+      <workItem from="1685100881794" duration="4131000" />
+      <workItem from="1685503201182" duration="2415000" />
+      <workItem from="1685859491703" duration="11895000" />
+      <workItem from="1685958567463" duration="1510000" />
+      <workItem from="1685960098644" duration="777000" />
+      <workItem from="1685960889389" duration="1469000" />
+      <workItem from="1685963551159" duration="71000" />
+      <workItem from="1686017237361" duration="1929000" />
+      <workItem from="1686020583917" duration="2257000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="application.yml" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
