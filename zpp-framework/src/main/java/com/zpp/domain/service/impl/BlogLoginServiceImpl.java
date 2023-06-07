@@ -22,6 +22,7 @@ import java.util.Objects;
 public class BlogLoginServiceImpl implements BlogLoginService {
 
     @Autowired
+
     private AuthenticationManager authenticationManager;
 
     @Autowired
@@ -30,6 +31,7 @@ public class BlogLoginServiceImpl implements BlogLoginService {
     @Override
     public ResponseResult login(User user) {
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(user.getUserName(),user.getPassword());
+        //身份验证管理器-开始认证
         Authentication authenticate = authenticationManager.authenticate(authenticationToken);
         //判断是否认证通过
         if(Objects.isNull(authenticate)){

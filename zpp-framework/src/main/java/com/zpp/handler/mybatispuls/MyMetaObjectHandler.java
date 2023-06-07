@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
+/**
+ * 自定义自动填充的填充逻辑
+ */
 @Component
 public class MyMetaObjectHandler implements MetaObjectHandler {
     @Override
@@ -16,6 +19,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
             userId = SecurityUtils.getUserId();
         } catch (Exception e) {
             e.printStackTrace();
+            //若userId为空，或者没拿到id时自动赋值
             userId = -1L;//表示是自己创建
         }
         this.setFieldValByName("createTime", new Date(), metaObject);

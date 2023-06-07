@@ -1,5 +1,6 @@
 package com.zpp.controller;
 
+import com.zpp.annotation.SystemLog;
 import com.zpp.domain.ResponseResult;
 import com.zpp.domain.entity.LoginUser;
 import com.zpp.domain.entity.Menu;
@@ -33,6 +34,7 @@ public class LoginController {
     @Autowired
     private RoleService roleService;
 
+    @SystemLog(businessName = "管理后台登录")
     @PostMapping("/user/login")
     public ResponseResult login(@RequestBody User user){
         if(!StringUtils.hasText(user.getUserName())){
@@ -42,6 +44,7 @@ public class LoginController {
         return loginService.login(user);
     }
 
+    @SystemLog(businessName = "管理后台退出")
     @PostMapping("/user/logout")
     public ResponseResult logout(){
         return loginService.logout();

@@ -38,6 +38,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Override
     public ResponseResult updateUserInfo(User user) {
+        //TODO 此处操作很危险，没有对字段进行校验
         updateById(user);
         return ResponseResult.okResult();
     }
@@ -66,6 +67,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if(nickNameExist(user.getNickName())){
             throw new SystemException(AppHttpCodeEnum.NICKNAME_EXIST);
         }
+        if(nickEmailExist(user.getEmail())){
+            throw new SystemException(AppHttpCodeEnum.EMAIL_EXIST);
+        }
         //...
         //对密码进行加密
         String encodePassword = passwordEncoder.encode(user.getPassword());
@@ -75,9 +79,17 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return ResponseResult.okResult();
     }
 
+    private boolean nickEmailExist(String email) {
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(User::getEmail,email);
+        //count()获取记录数，
+        return count(queryWrapper)>0;
+    }
+
     private boolean userNameExist(String userName) {
         LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(User::getUserName,userName);
+        //count()获取记录数，
         return count(queryWrapper)>0;
     }
 

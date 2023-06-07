@@ -32,22 +32,30 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
     @Autowired
     private UserService userService;
 
+    /**
+     * 文章评论与友链评论通用的方法
+     * @param commentType 标识是评论类型
+     * @param articleId 若是文章评论，则有文章id
+     * @param pageNum 页码
+     * @param pageSize 大小
+     * @return
+     */
     @Override
     public ResponseResult commentList(String commentType, Long articleId, Integer pageNum, Integer pageSize) {
         //查询对应文章的根评论
         LambdaQueryWrapper<Comment> queryWrapper = new LambdaQueryWrapper<>();
         //TODO 想做根评论排序
         queryWrapper.orderByDesc(Comment::getCreateTime);
-        //对articleId进行判断
+        //对articleId进行判断，如果commentType为0，代表文章评论，条件才会加
         queryWrapper.eq(SystemConstants.ARTICLE_COMMENT.equals(commentType),Comment::getArticleId,articleId);
         //根评论 rootId为-1
         queryWrapper.eq(Comment::getRootId,SystemConstants.ROOT_COMMENT);
         //评论类型
         queryWrapper.eq(Comment::getType,commentType);
         //分页查询
-        Page<Comment> page = new Page(pageNum,pageSize);
+        Page<Comment> page = new Page<>(pageNum,pageSize);
         page(page,queryWrapper);
-
+        //遍历查询到的分页集合数据，调用toCommentVoList()为toCommentUserId，toCommentUserName赋值
         List<CommentVo> commentVoList = toCommentVoList(page.getRecords());
 
         //查询所有根评论对应的子评论集合，并且赋值给对应的属性
@@ -72,7 +80,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
         queryWrapper.eq(Comment::getRootId,id);
         queryWrapper.orderByDesc(Comment::getCreateTime);
         List<Comment> comments = list(queryWrapper);
-
+        //再次调用为两个属性赋值
         return toCommentVoList(comments);
     }
 

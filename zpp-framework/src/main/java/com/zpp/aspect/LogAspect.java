@@ -14,16 +14,20 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * 切面类
+ */
 @Component
 @Aspect
 @Slf4j
 public class LogAspect {
+    //切点为自定义注解，使用@SystemLog注解的方法都打印日志
     @Pointcut("@annotation(com.zpp.annotation.SystemLog)")
     public void pt(){
 
     }
 
-    //通知方法
+    //环绕通知-通知方法
     @Around("pt()")
     public Object printLog(ProceedingJoinPoint pjp) throws Throwable {
         Object proceed;
@@ -44,6 +48,10 @@ public class LogAspect {
         log.info("Response       : {}", JSON.toJSONString(proceed));
     }
 
+    /**
+     * 响应前可打印的信息
+     * @param pjp
+     */
     private void handleBefore(ProceedingJoinPoint pjp) {
         ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         assert requestAttributes != null;
@@ -69,7 +77,6 @@ public class LogAspect {
 
     private SystemLog getSystemLog(ProceedingJoinPoint pjp) {
         MethodSignature methodSignature = (MethodSignature) pjp.getSignature();
-        SystemLog systemLog = methodSignature.getMethod().getAnnotation(SystemLog.class);
-        return systemLog;
+        return methodSignature.getMethod().getAnnotation(SystemLog.class);
     }
 }

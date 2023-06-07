@@ -1,5 +1,6 @@
 package com.zpp.controller;
 
+import com.zpp.annotation.SystemLog;
 import com.zpp.domain.ResponseResult;
 import com.zpp.domain.entity.Article;
 import com.zpp.domain.entity.Article;
@@ -37,6 +38,7 @@ public class ArticleController {
     public ResponseResult getArticleDetail(@PathVariable("id") Long id){
         return articleService.getArticleDetail(id);
     }
+
 
     @PutMapping("/updateViewCount/{id}")
     public ResponseResult updateViewCount(@PathVariable("id") Long id){

@@ -15,6 +15,8 @@ import org.springframework.stereotype.Component;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 @Component
 @SpringBootTest(classes = ZppBlogApplication.class)
@@ -57,7 +59,7 @@ public class OSSTest {
 //            ByteArrayInputStream byteInputStream=new ByteArrayInputStream(uploadBytes);
 
 
-            InputStream inputStream = new FileInputStream("C:\\Users\\zpp\\Desktop\\alipay.png");
+            InputStream inputStream = Files.newInputStream(Paths.get("C:\\Users\\zpp\\Desktop\\Windows funny.jpg"));
             Auth auth = Auth.create(accessKey, secretKey);
             String upToken = auth.uploadToken(bucket);
 

@@ -25,7 +25,7 @@ public class UserController {
         //TODO 修改个人信息的时没有判断重复
         return userService.updateUserInfo(user);
     }
-
+    @SystemLog(businessName = "用户注册")
     @PostMapping("/register")
     public ResponseResult register(@RequestBody User user){
         return userService.register(user);

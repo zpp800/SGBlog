@@ -4,10 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30fd6cfc-ad88-4d02-ae6d-7cca0fb7f533" name="变更" comment="第一次往github推送">
+    <list default="true" id="30fd6cfc-ad88-4d02-ae6d-7cca0fb7f533" name="变更" comment="修改首页文章列表查询不到的问题，fastjson版本太高">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/TagController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-blog/src/test/java/com/zpp/OSSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/test/java/com/zpp/OSSTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/annotation/SystemLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/annotation/SystemLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/aspect/LogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/config/FastJsonRedisSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/config/FastJsonRedisSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/BlogLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/BlogLoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/OssUploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/OssUploadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/enums/AppHttpCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/enums/AppHttpCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/handler/mybatispuls/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/handler/mybatispuls/MyMetaObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/PathUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/PathUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +124,20 @@
       <recent name="com.zpp.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ZppBlogApplication">
+  <component name="RunManager" selected="Spring Boot.BlogAdminApplication">
+    <configuration name="JwtUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zpp.utils.JwtUtil" />
+      <module name="zpp-framework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zpp.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OSSTest.testOss" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="zpp-blog" />
       <extension name="coverage">
@@ -117,25 +149,6 @@
       <option name="PACKAGE_NAME" value="com.zpp" />
       <option name="MAIN_CLASS_NAME" value="com.zpp.OSSTest" />
       <option name="METHOD_NAME" value="testOss" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="zpp-admin" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestController" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestController.list" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="zpp-admin" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestController" />
-      <option name="METHOD_NAME" value="list" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -169,11 +182,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ZppBlogApplication" />
         <item itemvalue="Spring Boot.BlogAdminApplication" />
-        <item itemvalue="JUnit.TestController.list" />
-        <item itemvalue="JUnit.TestController" />
+        <item itemvalue="Spring Boot.ZppBlogApplication" />
         <item itemvalue="JUnit.OSSTest.testOss" />
+        <item itemvalue="应用程序.JwtUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +265,8 @@
       <workItem from="1686020583917" duration="3378000" />
       <workItem from="1686033152252" duration="5060000" />
       <workItem from="1686095832888" duration="800000" />
-      <workItem from="1686096780061" duration="1517000" />
+      <workItem from="1686096780061" duration="3868000" />
+      <workItem from="1686123303747" duration="17067000" />
     </task>
     <task id="LOCAL-00001" summary="变更">
       <created>1686023187302</created>
@@ -269,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686033529380</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="修改首页文章列表查询不到的问题，fastjson版本太高">
+      <created>1686100312204</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686100312204</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +312,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="变更" />
     <MESSAGE value="第一次往github推送" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一次往github推送" />
+    <MESSAGE value="修改首页文章列表查询不到的问题，fastjson版本太高" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改首页文章列表查询不到的问题，fastjson版本太高" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

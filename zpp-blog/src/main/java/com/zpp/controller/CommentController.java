@@ -1,5 +1,6 @@
 package com.zpp.controller;
 
+import com.zpp.annotation.SystemLog;
 import com.zpp.constants.SystemConstants;
 import com.zpp.domain.ResponseResult;
 import com.zpp.domain.dto.AddCommentDto;
@@ -24,8 +25,9 @@ public class CommentController {
         return commentService.commentList(SystemConstants.ARTICLE_COMMENT,articleId,pageNum,pageSize);
     }
     /**
-     * 添加评论
+     * 添加评论，请求路径/comment，已经在类上添加，方法无需写。
      */
+    @SystemLog(businessName = "添加评论")
     @PostMapping
     public ResponseResult addComment(@RequestBody AddCommentDto addCommentDto){
         Comment comment = BeanCopyUtils.copyBean(addCommentDto, Comment.class);

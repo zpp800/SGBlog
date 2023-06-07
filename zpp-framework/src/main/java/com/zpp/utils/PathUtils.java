@@ -16,6 +16,6 @@ public class PathUtils {
         int index = fileName.lastIndexOf(".");
         // test.jpg -> .jpg
         String fileType = fileName.substring(index);
-        return new StringBuilder().append(datePath).append(uuid).append(fileType).toString();
+        return datePath + uuid + fileType;
     }
 }
