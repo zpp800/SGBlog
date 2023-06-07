@@ -48,8 +48,7 @@ public class WebConfig implements WebMvcConfigurer {
 
         fastJsonConfig.setSerializeConfig(SerializeConfig.globalInstance);
         fastConverter.setFastJsonConfig(fastJsonConfig);
-        HttpMessageConverter<?> converter = fastConverter;
-        return converter;
+        return fastConverter;
     }
 
     /**

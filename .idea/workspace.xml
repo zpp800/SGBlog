@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30fd6cfc-ad88-4d02-ae6d-7cca0fb7f533" name="变更" comment="变更">
+    <list default="true" id="30fd6cfc-ad88-4d02-ae6d-7cca0fb7f533" name="变更" comment="第一次往github推送">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/config/WebConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +27,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="2d129d43-335c-4b5c-b965-9197a9d0f709" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.4.3/mybatis-plus-extension-3.4.3-sources.jar!/com/baomidou/mybatisplus/extension/service/IService.java" root0="SKIP_INSPECTION" />
@@ -69,11 +73,15 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.17126437&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.build.tools.auto.reload&quot;: &quot;SELECTIVE&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;49e175025a33d7b23595fee791e7b853&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;
+    ],
     &quot;DatabaseDriversLRU&quot;: [
       &quot;mysql&quot;
     ]
@@ -97,7 +105,7 @@
       <recent name="com.zpp.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BlogAdminApplication">
+  <component name="RunManager" selected="Spring Boot.ZppBlogApplication">
     <configuration name="OSSTest.testOss" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="zpp-blog" />
       <extension name="coverage">
@@ -161,8 +169,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.BlogAdminApplication" />
         <item itemvalue="Spring Boot.ZppBlogApplication" />
+        <item itemvalue="Spring Boot.BlogAdminApplication" />
         <item itemvalue="JUnit.TestController.list" />
         <item itemvalue="JUnit.TestController" />
         <item itemvalue="JUnit.OSSTest.testOss" />
@@ -172,6 +180,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="SpringBootOptions">
     <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
+    <option name="myConnectionId" value="" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\zpp\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -235,7 +251,9 @@
       <workItem from="1685963551159" duration="71000" />
       <workItem from="1686017237361" duration="1929000" />
       <workItem from="1686020583917" duration="3378000" />
-      <workItem from="1686033152252" duration="343000" />
+      <workItem from="1686033152252" duration="5060000" />
+      <workItem from="1686095832888" duration="800000" />
+      <workItem from="1686096780061" duration="1517000" />
     </task>
     <task id="LOCAL-00001" summary="变更">
       <created>1686023187302</created>
@@ -244,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686023187302</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="第一次往github推送">
+      <created>1686033529380</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686033529380</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,9 +278,32 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="application.yml" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="变更" />
-    <option name="LAST_COMMIT_MESSAGE" value="变更" />
+    <MESSAGE value="第一次往github推送" />
+    <option name="LAST_COMMIT_MESSAGE" value="第一次往github推送" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/ArticleServiceImpl.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
