@@ -7,11 +7,13 @@ import com.zpp.domain.dto.AddCommentDto;
 import com.zpp.domain.entity.Comment;
 import com.zpp.domain.service.CommentService;
 import com.zpp.utils.BeanCopyUtils;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/comment")
+@Api(tags = "评论",description = "评论相关接口")
 public class CommentController {
 
     @Autowired
@@ -36,6 +38,7 @@ public class CommentController {
     /**
      *查询友链评论
      */
+
     @GetMapping("/linkCommentList")
     public ResponseResult linkCommentList(Integer pageNum,Integer pageSize){
         return commentService.commentList(SystemConstants.LINK_COMMENT,null,pageNum,pageSize);

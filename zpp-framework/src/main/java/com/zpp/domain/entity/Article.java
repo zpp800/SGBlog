@@ -81,6 +81,11 @@ public class Article implements Serializable {
      */
     private Integer delFlag;
 
+    /**
+     * 构造方法，在更新浏览量时使用
+     * @param id id
+     * @param viewCount 浏览量
+     */
     public Article(Long id, long viewCount) {
         this.id = id;
         this.viewCount = viewCount;

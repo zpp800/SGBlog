@@ -4,29 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30fd6cfc-ad88-4d02-ae6d-7cca0fb7f533" name="变更" comment="修改首页文章列表查询不到的问题，fastjson版本太高">
+    <list default="true" id="30fd6cfc-ad88-4d02-ae6d-7cca0fb7f533" name="变更" comment="代码优化调整，完善了系统日志功能。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/TagController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/ZppBlogApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/ZppBlogApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-blog/src/test/java/com/zpp/OSSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/test/java/com/zpp/OSSTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/annotation/SystemLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/annotation/SystemLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/aspect/LogAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/config/FastJsonRedisSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/config/FastJsonRedisSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/BlogLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/BlogLoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/job/TestJob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/job/UpdateViewCountJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/job/UpdateViewCountJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/runner/TestRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/runner/ViewCountRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/runner/ViewCountRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/constants/SystemConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/constants/SystemConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/ArticleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/OssUploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/OssUploadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/enums/AppHttpCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/enums/AppHttpCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/handler/mybatispuls/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/handler/mybatispuls/MyMetaObjectHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/PathUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/PathUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/RedisCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/RedisCache.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +38,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="2d129d43-335c-4b5c-b965-9197a9d0f709" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2d129d43-335c-4b5c-b965-9197a9d0f709" />
+        <option name="url" value="https://github.com/zpp800/SGBlog.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.4.3/mybatis-plus-extension-3.4.3-sources.jar!/com/baomidou/mybatisplus/extension/service/IService.java" root0="SKIP_INSPECTION" />
@@ -68,44 +71,44 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable&quot;: &quot;SELECTIVE&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;jdk1.8.0_271&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/idea/博客/Blog&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.17126437&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.build.tools.auto.reload&quot;: &quot;SELECTIVE&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;49e175025a33d7b23595fee791e7b853&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable": "SELECTIVE",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "jdk1.8.0_271",
+    "last_opened_file_path": "D:/idea/博客/Blog",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.17126437",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.build.tools.auto.reload": "SELECTIVE",
+    "settings.editor.selected.configurable": "settings.sync",
+    "spring.configuration.checksum": "49e175025a33d7b23595fee791e7b853",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "module"
     ],
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -124,7 +127,7 @@
       <recent name="com.zpp.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BlogAdminApplication">
+  <component name="RunManager" selected="Spring Boot.ZppBlogApplication">
     <configuration name="JwtUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zpp.utils.JwtUtil" />
       <module name="zpp-framework" />
@@ -182,8 +185,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.BlogAdminApplication" />
         <item itemvalue="Spring Boot.ZppBlogApplication" />
+        <item itemvalue="Spring Boot.BlogAdminApplication" />
         <item itemvalue="JUnit.OSSTest.testOss" />
         <item itemvalue="应用程序.JwtUtil" />
       </list>
@@ -266,7 +269,7 @@
       <workItem from="1686033152252" duration="5060000" />
       <workItem from="1686095832888" duration="800000" />
       <workItem from="1686096780061" duration="3868000" />
-      <workItem from="1686123303747" duration="17067000" />
+      <workItem from="1686123303747" duration="26024000" />
     </task>
     <task id="LOCAL-00001" summary="变更">
       <created>1686023187302</created>
@@ -289,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686100312204</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="代码优化调整，完善了系统日志功能。">
+      <created>1686140947678</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686140947678</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,18 +323,8 @@
     <MESSAGE value="变更" />
     <MESSAGE value="第一次往github推送" />
     <MESSAGE value="修改首页文章列表查询不到的问题，fastjson版本太高" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改首页文章列表查询不到的问题，fastjson版本太高" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/ArticleServiceImpl.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="代码优化调整，完善了系统日志功能。" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码优化调整，完善了系统日志功能。" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

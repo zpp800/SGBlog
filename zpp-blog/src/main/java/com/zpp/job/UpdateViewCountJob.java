@@ -1,5 +1,6 @@
 package com.zpp.job;
 
+import com.zpp.constants.SystemConstants;
 import com.zpp.domain.entity.Article;
 import com.zpp.domain.service.ArticleService;
 import com.zpp.utils.RedisCache;
@@ -23,7 +24,7 @@ public class UpdateViewCountJob {
     @Scheduled(cron = "0/55 * * * * ?")
     public void updateViewCount(){
         //获取redis中的浏览量
-        Map<String, Integer> viewCountMap = redisCache.getCacheMap("article:viewCount");
+        Map<String, Integer> viewCountMap = redisCache.getCacheMap(SystemConstants.ARTICLE_VIEW_COUNT_KEY);
 
         List<Article> articles = viewCountMap.entrySet()
                 .stream()

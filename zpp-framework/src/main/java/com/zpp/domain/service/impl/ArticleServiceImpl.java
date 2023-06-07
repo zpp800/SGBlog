@@ -100,7 +100,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         //根据id查询文章
         Article article = getById(id);
         //从redis中获取viewCount
-        Integer viewCount = redisCache.getCacheMapValue("article:viewCount", id.toString());
+        Integer viewCount = redisCache.getCacheMapValue(SystemConstants.ARTICLE_VIEW_COUNT_KEY, id.toString());
         article.setViewCount(viewCount.longValue());
         //转换成VO
         ArticleDetailVo articleDetailVo = BeanCopyUtils.copyBean(article, ArticleDetailVo.class);
@@ -117,8 +117,9 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     @Override
     public ResponseResult updateViewCount(Long id) {
         //更新redis中对应 id的浏览量
-        redisCache.incrementCacheMapValue("article:viewCount",id.toString(),1);
-        return ResponseResult.okResult();
+        redisCache.incrementCacheMapValue(SystemConstants.ARTICLE_VIEW_COUNT_KEY,id.toString(),1);
+
+        return ResponseResult.okResult("浏览量更新请求");
     }
 }
 

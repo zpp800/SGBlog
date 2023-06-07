@@ -1,6 +1,5 @@
 package com.zpp;
 
-import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,5 +15,10 @@ import springfox.documentation.oas.annotations.EnableOpenApi;
 public class ZppBlogApplication {
     public static void main(String[] args) {
         SpringApplication.run(ZppBlogApplication.class,args);
-    }
-}
+        System.out.println(" ______  _____   _____  ");
+        System.out.println("|___  / |  _  \\ |  _  \\ ");
+        System.out.println("   / /  | |_| | | |_| | ");
+        System.out.println("  / /   |  ___/ |  ___/ ");
+        System.out.println(" / /__  | |     | |     ");
+        System.out.println("/_____| |_|     |_|     1.0");
+    }}
