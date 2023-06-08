@@ -13,7 +13,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 
 @Configuration
 @EnableOpenApi
-public class Swagger2Config {
+public class Swagger3Config {
 
     @Bean
     public Docket createRestApi() {
