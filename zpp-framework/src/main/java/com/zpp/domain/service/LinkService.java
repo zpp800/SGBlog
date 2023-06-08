@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.zpp.domain.ResponseResult;
 import com.zpp.domain.entity.Link;
 
+import java.util.List;
+
 /**
  * 友链(Link)表服务接口
  *
@@ -13,5 +15,11 @@ import com.zpp.domain.entity.Link;
 public interface LinkService extends IService<Link> {
 
     ResponseResult getAllLink();
+
+    ResponseResult pageLinkList(Integer pageNum, Integer pageSize, String name, String status);
+
+    ResponseResult deleteLink(List<String> id);
+
+    ResponseResult addLink(Link link);
 }
 

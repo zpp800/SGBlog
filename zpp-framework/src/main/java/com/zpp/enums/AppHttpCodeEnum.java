@@ -20,7 +20,13 @@ public enum AppHttpCodeEnum {
     EMAIL_NOT_NULL(511, "邮箱不能为空"),
     NICKNAME_EXIST(512, "昵称已存在"),
     TAG_NOT_NULL(513,"标签名称不能为空" ),
-    TAG_NAME_EXIST(514,"标签名称已存在" );
+    TAG_NAME_EXIST(514,"标签名称已存在" ),
+    LINK_NOT_NULL(515,"友链名称不能为空" ),
+    LINK_LOGO_NOT_NULL(516,"友链logo不能为空" ),
+    LINK_ADDRESS_NOT_NULL(517,"友链地址不能为空" ),
+    LINK_DESCRIPTION_NOT_NULL(518,"友链描述不能为空" ),
+    LINK_STATUS_NOT_NULL(519,"友链状态不能为空" ),
+    LINK_NAME_EXIST(520,"友链名称已存在" );
     int code;
     String msg;
 

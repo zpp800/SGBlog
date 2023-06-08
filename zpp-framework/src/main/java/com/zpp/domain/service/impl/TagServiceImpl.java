@@ -66,7 +66,6 @@ public class TagServiceImpl extends ServiceImpl<TagMapper, Tag> implements TagSe
 
     @Override
     public ResponseResult deleteTag(List<String> id) {
-        id.forEach(System.out::println);
         tagMapper.deleteBatchIds(id);
         return ResponseResult.okResult();
     }
