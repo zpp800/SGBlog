@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -59,6 +60,29 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
+    }
+
+
+
+
+    /*
+     * 解决Security访问Swagger2被拦截的问题；
+     * */
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        // allow Swagger URL to be accessed without authentication
+        web.ignoring().antMatchers(
+                "/swagger-ui/index.html",
+                "/doc.html",
+                "/v2/api-docs", // swagger api json
+                "/swagger-resources/configuration/ui", // 用来获取支持的动作
+                "/swagger-resources", // 用来获取api-docs的URI
+                "/swagger-resources/configuration/security", // 安全选项
+                "/swagger-resources/**",
+                //补充路径，近期在搭建swagger接口文档时，通过浏览器控制台发现该/webjars路径下的文件被拦截，故加上此过滤条件即可
+                "/webjars/**"
+
+        );
     }
 
 }

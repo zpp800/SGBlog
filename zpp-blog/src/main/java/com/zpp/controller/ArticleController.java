@@ -5,6 +5,7 @@ import com.zpp.domain.ResponseResult;
 import com.zpp.domain.entity.Article;
 import com.zpp.domain.entity.Article;
 import com.zpp.domain.service.ArticleService;
+import com.zpp.domain.vo.ArticleDetailVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -43,7 +44,7 @@ public class ArticleController {
             @ApiImplicitParam(name = "pageSize",value = "每页大小",dataTypeClass = Integer.class,required = true),
             @ApiImplicitParam(name = "categoryId",value = "分类ID",dataTypeClass = Long.class,required = true),
     })
-    public ResponseResult articleList(Integer pageNum,Integer pageSize,Long categoryId){
+    public ResponseResult<ArticleDetailVo> articleList(Integer pageNum,Integer pageSize,Long categoryId){
         return articleService.articleList(pageNum,pageSize,categoryId);
     }
 
@@ -52,7 +53,7 @@ public class ArticleController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "id",value = "文章id",dataTypeClass = Long.class,required = true),
     })
-    public ResponseResult getArticleDetail(@PathVariable("id") Long id){
+    public ResponseResult<ArticleDetailVo> getArticleDetail(@PathVariable("id") Long id){
         return articleService.getArticleDetail(id);
     }
 

@@ -16,6 +16,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import javax.annotation.Resource;
+
 /**
  * 用户表(User)表服务实现类
  *
@@ -43,7 +45,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return ResponseResult.okResult();
     }
 
-    @Autowired
+    @Resource
     private PasswordEncoder passwordEncoder;
     @Override
     public ResponseResult register(User user) {

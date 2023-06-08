@@ -4,6 +4,7 @@ package com.zpp.domain.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.zpp.domain.ResponseResult;
 import com.zpp.domain.entity.Article;
+import com.zpp.domain.vo.ArticleDetailVo;
 
 /**
  * 文章表(Article)表服务接口
@@ -18,7 +19,7 @@ public interface ArticleService extends IService<Article> {
 
     ResponseResult articleList(Integer pageNum, Integer pageSize, Long categoryId);
 
-    ResponseResult getArticleDetail(Long id);
+    ResponseResult<ArticleDetailVo> getArticleDetail(Long id);
 
     ResponseResult updateViewCount(Long id);
 }

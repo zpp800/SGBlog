@@ -26,3 +26,8 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
       id-type: auto
+oss:
+  accessKey: ISCiJbE-md9PF9JQAfkiCUsBU8ffMAj8oGhUX06l
+  secretKey: uBMBwu5DLUpZzD6IA8Z34Mx8Q-Si6xidU366PqZa
+  bucket: zpp-blog
+  domainName: http://qiniuyun.hanxi.fun/
