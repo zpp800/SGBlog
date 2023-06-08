@@ -26,7 +26,11 @@ public enum AppHttpCodeEnum {
     LINK_ADDRESS_NOT_NULL(517,"友链地址不能为空" ),
     LINK_DESCRIPTION_NOT_NULL(518,"友链描述不能为空" ),
     LINK_STATUS_NOT_NULL(519,"友链状态不能为空" ),
-    LINK_NAME_EXIST(520,"友链名称已存在" );
+    LINK_NAME_EXIST(520,"友链名称已存在" ),
+    CATEGORY_NOT_NULL(521,"分类名称不能为空" ),
+    CATEGORY_DESCRIPTION_NOT_NULL(522,"分类描述不能为空" ),
+    CATEGORY_STATUS_NOT_NULL(523,"分类状态不能为空" ),
+    CATEGORY_NAME_EXIST(524,"分类名称已存在" );
     int code;
     String msg;
 

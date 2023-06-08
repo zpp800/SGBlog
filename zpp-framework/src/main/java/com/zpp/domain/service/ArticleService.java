@@ -3,6 +3,7 @@ package com.zpp.domain.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.zpp.domain.ResponseResult;
+import com.zpp.domain.dto.AddArticleDto;
 import com.zpp.domain.entity.Article;
 import com.zpp.domain.vo.ArticleDetailVo;
 
@@ -22,5 +23,9 @@ public interface ArticleService extends IService<Article> {
     ResponseResult<ArticleDetailVo> getArticleDetail(Long id);
 
     ResponseResult updateViewCount(Long id);
+
+    ResponseResult add(AddArticleDto article);
+
+    ResponseResult pageLinkList(Integer pageNum, Integer pageSize, String title, String content);
 }
 

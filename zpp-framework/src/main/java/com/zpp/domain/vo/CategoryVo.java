@@ -13,4 +13,6 @@ public class CategoryVo  {
     private String name;
     //描述
     private String description;
+    //状态0:正常,1禁用
+    private String status;
 }

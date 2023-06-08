@@ -4,16 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30fd6cfc-ad88-4d02-ae6d-7cca0fb7f533" name="变更" comment="后台管理模块，实现了标签的增删改查，写博实现部分功能">
-      <change afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/LinkController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/dto/AddLinkDto.java" afterDir="false" />
+    <list default="true" id="30fd6cfc-ad88-4d02-ae6d-7cca0fb7f533" name="变更" comment="后台管理模块，实现了友链的增删改查审核，代码优化。">
+      <change afterPath="$PROJECT_DIR$/.idea/easyCodeMybatisCodeHelperTableSetting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/ArticleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/dto/AddArticleDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/dto/AddCategoryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/ArticleTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/mapper/ArticleTagMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/ArticleTagService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/ArticleTagServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/ArticleVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/Link.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/LinkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/LinkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/CategoryServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/LinkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/LinkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/TagServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/LinkVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/LinkVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/CategoryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/CategoryVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/enums/AppHttpCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/enums/AppHttpCodeEnum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +45,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
     <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -112,8 +124,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.zpp.domain.dto" />
       <recent name="com.zpp.domain.vo" />
+      <recent name="com.zpp.domain.dto" />
       <recent name="com.zpp.domain.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -271,7 +283,7 @@
       <workItem from="1686123303747" duration="26024000" />
       <workItem from="1686183177764" duration="70000" />
       <workItem from="1686183290974" duration="12845000" />
-      <workItem from="1686212741281" duration="14059000" />
+      <workItem from="1686212741281" duration="18749000" />
     </task>
     <task id="LOCAL-00001" summary="变更">
       <created>1686023187302</created>
@@ -315,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686221500136</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="后台管理模块，实现了友链的增删改查审核，代码优化。">
+      <created>1686227168478</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686227168478</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,13 +382,15 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="变更" />
     <MESSAGE value="第一次往github推送" />
     <MESSAGE value="修改首页文章列表查询不到的问题，fastjson版本太高" />
     <MESSAGE value="代码优化调整，完善了系统日志功能。" />
     <MESSAGE value="前端基本完成，使用swagger文档。" />
     <MESSAGE value="后台管理模块，实现了标签的增删改查，写博实现部分功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="后台管理模块，实现了标签的增删改查，写博实现部分功能" />
+    <MESSAGE value="后台管理模块，实现了友链的增删改查审核，代码优化。" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台管理模块，实现了友链的增删改查审核，代码优化。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

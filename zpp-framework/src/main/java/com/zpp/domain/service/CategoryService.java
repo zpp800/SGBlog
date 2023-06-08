@@ -18,5 +18,11 @@ public interface CategoryService extends IService<Category> {
     ResponseResult getCategoryList();
 
     ResponseResult listAllCategory();
+
+    ResponseResult pageLinkList(Integer pageNum, Integer pageSize, String name, String status);
+
+    ResponseResult deleteCategory(List<String> id);
+
+    ResponseResult addLink(Category category);
 }
 

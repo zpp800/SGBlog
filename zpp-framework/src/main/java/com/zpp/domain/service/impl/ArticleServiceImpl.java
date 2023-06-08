@@ -5,21 +5,24 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zpp.constants.SystemConstants;
 import com.zpp.domain.ResponseResult;
+import com.zpp.domain.dto.AddArticleDto;
 import com.zpp.domain.entity.Article;
+import com.zpp.domain.entity.ArticleTag;
 import com.zpp.domain.entity.Category;
 import com.zpp.domain.mapper.ArticleMapper;
 import com.zpp.domain.service.ArticleService;
+import com.zpp.domain.service.ArticleTagService;
 import com.zpp.domain.service.CategoryService;
-import com.zpp.domain.vo.ArticleDetailVo;
-import com.zpp.domain.vo.ArticleListVo;
-import com.zpp.domain.vo.HotArticleVo;
-import com.zpp.domain.vo.PageVo;
+import com.zpp.domain.vo.*;
 import com.zpp.utils.BeanCopyUtils;
 import com.zpp.utils.RedisCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -120,6 +123,43 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         redisCache.incrementCacheMapValue(SystemConstants.ARTICLE_VIEW_COUNT_KEY,id.toString(),1);
 
         return ResponseResult.okResult("浏览量更新请求");
+    }
+
+    @Resource
+    private ArticleTagService articleTagService;
+
+    @Override
+    @Transactional
+    public ResponseResult add(AddArticleDto articleDto) {
+        //添加 博客
+        Article article = BeanCopyUtils.copyBean(articleDto, Article.class);
+        save(article);
+
+        //mp插入数据后会将id等属性值返回到对象上
+        //转成stream流
+        //分别获取创建ArticleTag(article.getId(), tagId)对象
+        List<ArticleTag> articleTags = articleDto.getTags().stream()
+                .map(tagId -> new ArticleTag(article.getId(), tagId))
+                .collect(Collectors.toList());
+
+        //添加 博客和标签的关联
+        articleTagService.saveBatch(articleTags);
+        return ResponseResult.okResult();
+    }
+
+    @Override
+    public ResponseResult pageLinkList(Integer pageNum, Integer pageSize, String title, String content) {
+        //分页查询
+        LambdaQueryWrapper<Article> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.like(StringUtils.hasText(title),Article::getTitle, title);
+        queryWrapper.like(StringUtils.hasText(content),Article::getStatus,content);
+        Page<Article> page = new Page<>(pageNum,pageSize);
+        page(page,queryWrapper);
+        List<Article> articleList = page.getRecords();
+        //封装数据返回
+        List<ArticleVo> articleVos = BeanCopyUtils.copyBeanList(articleList, ArticleVo.class);
+        PageVo pageVo = new PageVo(articleList,page.getTotal());
+        return ResponseResult.okResult(pageVo);
     }
 }
 

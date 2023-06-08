@@ -53,8 +53,8 @@ public class LinkServiceImpl extends ServiceImpl<LinkMapper, Link> implements Li
         page(page,queryWrapper);
         List<Link> linkList = page.getRecords();
         //封装数据返回
-        List<LinkVo> tagVos = BeanCopyUtils.copyBeanList(linkList, LinkVo.class);
-        PageVo pageVo = new PageVo(tagVos,page.getTotal());
+        List<LinkVo> linkVos = BeanCopyUtils.copyBeanList(linkList, LinkVo.class);
+        PageVo pageVo = new PageVo(linkVos,page.getTotal());
         return ResponseResult.okResult(pageVo);
     }
 

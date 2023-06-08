@@ -2,6 +2,7 @@ package com.zpp.controller;
 
 import com.zpp.domain.ResponseResult;
 import com.zpp.domain.service.UploadService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -15,6 +16,7 @@ import javax.annotation.Resource;
 import java.io.IOException;
 
 @RestController
+@Api(tags = "图片相关接口")
 public class UploadController {
 
     @Resource
