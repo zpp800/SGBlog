@@ -36,10 +36,12 @@ import java.util.stream.Collectors;
 @Service("articleService")
 public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> implements ArticleService {
 
-    @Autowired
+    @Resource
     @Lazy
     private  CategoryService categoryService;
-    @Autowired
+    @Resource
+    private ArticleMapper articleMapper;
+    @Resource
     private RedisCache redisCache;
     @Override
     public ResponseResult hotArticleList() {
@@ -148,18 +150,24 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     }
 
     @Override
-    public ResponseResult pageLinkList(Integer pageNum, Integer pageSize, String title, String content) {
+    public ResponseResult pageLinkList(Integer pageNum, Integer pageSize, String title, String summary) {
         //分页查询
         LambdaQueryWrapper<Article> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.like(StringUtils.hasText(title),Article::getTitle, title);
-        queryWrapper.like(StringUtils.hasText(content),Article::getStatus,content);
+        queryWrapper.like(StringUtils.hasText(summary),Article::getSummary,summary);
         Page<Article> page = new Page<>(pageNum,pageSize);
         page(page,queryWrapper);
         List<Article> articleList = page.getRecords();
         //封装数据返回
         List<ArticleVo> articleVos = BeanCopyUtils.copyBeanList(articleList, ArticleVo.class);
-        PageVo pageVo = new PageVo(articleList,page.getTotal());
+        PageVo pageVo = new PageVo(articleVos,page.getTotal());
         return ResponseResult.okResult(pageVo);
+    }
+
+    @Override
+    public ResponseResult deleteArticle(List<String> id) {
+        articleMapper.deleteBatchIds(id);
+        return ResponseResult.okResult();
     }
 }
 

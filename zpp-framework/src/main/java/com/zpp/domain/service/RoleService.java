@@ -1,6 +1,7 @@
 package com.zpp.domain.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.zpp.domain.ResponseResult;
 import com.zpp.domain.entity.Role;
 
 import java.util.List;
@@ -14,5 +15,7 @@ import java.util.List;
 public interface RoleService extends IService<Role> {
 
     List<String> selectRoleKeyByUserId(Long id);
+
+    ResponseResult pageLinkList(Integer pageNum, Integer pageSize, String roleName, String status);
 }
 

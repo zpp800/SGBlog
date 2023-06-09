@@ -7,6 +7,8 @@ import com.zpp.domain.dto.AddArticleDto;
 import com.zpp.domain.entity.Article;
 import com.zpp.domain.vo.ArticleDetailVo;
 
+import java.util.List;
+
 /**
  * 文章表(Article)表服务接口
  *
@@ -27,5 +29,7 @@ public interface ArticleService extends IService<Article> {
     ResponseResult add(AddArticleDto article);
 
     ResponseResult pageLinkList(Integer pageNum, Integer pageSize, String title, String content);
+
+    ResponseResult deleteArticle(List<String> id);
 }
 

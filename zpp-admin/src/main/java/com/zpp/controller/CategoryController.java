@@ -1,5 +1,7 @@
 package com.zpp.controller;
 
+import com.alibaba.excel.EasyExcel;
+import com.alibaba.fastjson.JSON;
 import com.zpp.annotation.SystemLog;
 import com.zpp.domain.ResponseResult;
 import com.zpp.domain.dto.AddCategoryDto;
@@ -7,8 +9,11 @@ import com.zpp.domain.dto.AddLinkDto;
 import com.zpp.domain.entity.Category;
 import com.zpp.domain.service.CategoryService;
 import com.zpp.domain.vo.CategoryVo;
+import com.zpp.domain.vo.ExcelCategoryVo;
 import com.zpp.domain.vo.LinkVo;
+import com.zpp.enums.AppHttpCodeEnum;
 import com.zpp.utils.BeanCopyUtils;
+import com.zpp.utils.WebUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -17,6 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
@@ -82,5 +88,27 @@ public class CategoryController {
     public ResponseResult addTag(@RequestBody AddCategoryDto addCategoryDto){
         Category category = BeanCopyUtils.copyBean(addCategoryDto, Category.class);
         return categoryService.addLink(category);
+    }
+
+    //分类导出
+    @GetMapping("/export")
+    @ApiOperation(value = "导出分类",notes = "导出分类")
+    public void export(HttpServletResponse response){
+        try {
+            //设置下载文件的请求头
+            WebUtils.setDownLoadHeader("分类.xlsx",response);
+            //获取需要导出的数据
+            List<Category> categoryVos = categoryService.list();
+
+            List<ExcelCategoryVo> excelCategoryVos = BeanCopyUtils.copyBeanList(categoryVos, ExcelCategoryVo.class);
+            //把数据写入到Excel中
+            EasyExcel.write(response.getOutputStream(), ExcelCategoryVo.class).autoCloseStream(Boolean.FALSE).sheet("分类导出")
+                    .doWrite(excelCategoryVos);
+
+        } catch (Exception e) {
+            //如果出现异常也要响应json
+            ResponseResult result = ResponseResult.errorResult(AppHttpCodeEnum.SYSTEM_ERROR);
+            WebUtils.renderString(response, JSON.toJSONString(result));
+        }
     }
 }

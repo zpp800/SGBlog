@@ -4,28 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30fd6cfc-ad88-4d02-ae6d-7cca0fb7f533" name="变更" comment="后台管理模块，实现了友链的增删改查审核，代码优化。">
-      <change afterPath="$PROJECT_DIR$/.idea/easyCodeMybatisCodeHelperTableSetting.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/ArticleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/dto/AddArticleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/dto/AddCategoryDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/ArticleTag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/mapper/ArticleTagMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/ArticleTagService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/ArticleTagServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/ArticleVo.java" afterDir="false" />
+    <list default="true" id="30fd6cfc-ad88-4d02-ae6d-7cca0fb7f533" name="变更" comment="后台管理模块，实现了分类的增删改查，写博文功能，文章分页查询：响应字段未完&quot;isComment  &quot;isTop,&quot;status等,。">
+      <change afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/MenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/RoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/dto/RoleDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/ExcelCategoryVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/MenuVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/RoleVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/UserVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/BlogAdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/BlogAdminApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/ArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/MenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/LinkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/LinkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/CategoryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/CategoryVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/enums/AppHttpCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/enums/AppHttpCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/ArticleVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/ArticleVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/WebUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/WebUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +284,9 @@
       <workItem from="1686123303747" duration="26024000" />
       <workItem from="1686183177764" duration="70000" />
       <workItem from="1686183290974" duration="12845000" />
-      <workItem from="1686212741281" duration="18749000" />
+      <workItem from="1686212741281" duration="20810000" />
+      <workItem from="1686286771824" duration="3987000" />
+      <workItem from="1686292208653" duration="5509000" />
     </task>
     <task id="LOCAL-00001" summary="变更">
       <created>1686023187302</created>
@@ -334,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686227168478</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="后台管理模块，实现了分类的增删改查，写博文功能，文章分页查询：响应字段未完&quot;isComment  &quot;isTop,&quot;status等,。">
+      <created>1686233624677</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686233624677</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +400,8 @@
     <MESSAGE value="前端基本完成，使用swagger文档。" />
     <MESSAGE value="后台管理模块，实现了标签的增删改查，写博实现部分功能" />
     <MESSAGE value="后台管理模块，实现了友链的增删改查审核，代码优化。" />
-    <option name="LAST_COMMIT_MESSAGE" value="后台管理模块，实现了友链的增删改查审核，代码优化。" />
+    <MESSAGE value="后台管理模块，实现了分类的增删改查，写博文功能，文章分页查询：响应字段未完&quot;isComment  &quot;isTop,&quot;status等,。" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台管理模块，实现了分类的增删改查，写博文功能，文章分页查询：响应字段未完&quot;isComment  &quot;isTop,&quot;status等,。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

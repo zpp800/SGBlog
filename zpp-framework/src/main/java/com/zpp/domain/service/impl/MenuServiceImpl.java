@@ -3,12 +3,18 @@ package com.zpp.domain.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zpp.constants.SystemConstants;
+import com.zpp.domain.ResponseResult;
 import com.zpp.domain.mapper.MenuMapper;
 import com.zpp.domain.entity.Menu;
 import com.zpp.domain.service.MenuService;
+import com.zpp.domain.vo.MenuVo;
+import com.zpp.utils.BeanCopyUtils;
 import com.zpp.utils.SecurityUtils;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,6 +27,9 @@ import java.util.stream.Collectors;
 @Service("menuService")
 public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements MenuService {
 
+    @Resource
+    @Lazy
+    private MenuService menuService;
     @Override
     public List<String> selectPermsByUserId(Long id) {
         //如果是管理员，返回所有的权限
@@ -55,6 +64,17 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements Me
         //先找出第一层的菜单  然后去找他们的子菜单设置到children属性中
         List<Menu> menuTree = builderMenuTree(menus,0L);
         return menuTree;
+    }
+
+    @Override
+    public ResponseResult getAllMenuList(String status, String menuName) {
+        LambdaQueryWrapper<Menu> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(StringUtils.hasText(status),Menu::getStatus,status);
+        wrapper.like(StringUtils.hasText(menuName),Menu::getMenuName,menuName);
+        wrapper.orderByAsc(Menu::getOrderNum);
+        List<Menu> menuList = menuService.list(wrapper);
+        List<MenuVo> menuVos = BeanCopyUtils.copyBeanList(menuList, MenuVo.class);
+        return ResponseResult.okResult(menuVos);
     }
 
     private List<Menu> builderMenuTree(List<Menu> menus, Long parentId) {

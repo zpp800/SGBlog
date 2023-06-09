@@ -1,12 +1,17 @@
 package com.zpp.domain.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zpp.domain.ResponseResult;
+import com.zpp.domain.entity.Article;
 import com.zpp.domain.mapper.UserMapper;
 import com.zpp.domain.entity.User;
 import com.zpp.domain.service.UserService;
+import com.zpp.domain.vo.ArticleVo;
+import com.zpp.domain.vo.PageVo;
 import com.zpp.domain.vo.UserInfoVo;
+import com.zpp.domain.vo.UserVo;
 import com.zpp.enums.AppHttpCodeEnum;
 import com.zpp.exception.SystemException;
 import com.zpp.utils.BeanCopyUtils;
@@ -17,6 +22,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 用户表(User)表服务实现类
@@ -79,6 +85,22 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         //存入数据库
         save(user);
         return ResponseResult.okResult();
+    }
+
+    @Override
+    public ResponseResult pageLinkList(Integer pageNum, Integer pageSize, String userName, String phonenumber, String status) {
+        //分页查询
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.like(StringUtils.hasText(userName),User::getUserName, userName);
+        queryWrapper.eq(StringUtils.hasText(phonenumber),User::getPhonenumber,phonenumber);
+        queryWrapper.eq(StringUtils.hasText(status),User::getStatus,status);
+        Page<User> page = new Page<>(pageNum,pageSize);
+        page(page,queryWrapper);
+        List<User> userList = page.getRecords();
+        //封装数据返回
+        List<UserVo> userVos = BeanCopyUtils.copyBeanList(userList, UserVo.class);
+        PageVo pageVo = new PageVo(userVos,page.getTotal());
+        return ResponseResult.okResult(pageVo);
     }
 
     private boolean nickEmailExist(String email) {

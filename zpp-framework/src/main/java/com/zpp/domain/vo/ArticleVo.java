@@ -24,11 +24,18 @@ public class ArticleVo {
      */
     private Long categoryId;
     //所属分类名
-    private String categoryName;
+//    private String categoryName;
     //缩略图
     private String thumbnail;
-    //访问量
-    private Long viewCount;
 
     private Date createTime;
+    /**
+     * 是否允许评论 1是，0否
+     */
+    private String isComment;
+    private String isTop;
+    /**
+     * 状态（0已发布，1草稿）
+     */
+    private String status;
 }
