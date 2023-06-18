@@ -4,29 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30fd6cfc-ad88-4d02-ae6d-7cca0fb7f533" name="变更" comment="后台管理模块，实现了分类的增删改查，写博文功能，文章分页查询：响应字段未完&quot;isComment  &quot;isTop,&quot;status等,。">
-      <change afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/dto/RoleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/ExcelCategoryVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/MenuVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/RoleVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/UserVo.java" afterDir="false" />
+    <list default="true" id="30fd6cfc-ad88-4d02-ae6d-7cca0fb7f533" name="变更" comment="后台管理模块，用户、角色、菜单模块增删改功能未实现，权限校验未配置">
+      <change afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/PermissionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zpp-framework/src/test/java/Test01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/BlogAdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/BlogAdminApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/ArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/MenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/LinkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/LinkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/TagController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/java/com/zpp/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-blog/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-blog/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/constants/SystemConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/constants/SystemConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/LoginUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/MenuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/ArticleVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/vo/ArticleVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/WebUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/WebUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/handler/execption/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/handler/execption/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/handler/security/AccessDeniedHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/handler/security/AccessDeniedHandlerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/SecurityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/utils/SecurityUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/resources/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zpp-framework/src/main/resources/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zpp-framework/src/main/resources/mapper/RoleMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +71,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.4.3/mybatis-plus-extension-3.4.3-sources.jar!/com/baomidou/mybatisplus/extension/service/IService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/zpp-framework/pom.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/service/impl/OssUploadService.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -134,21 +139,18 @@
       <recent name="D:\idea\博客\Blog\zpp-framework\src\main\java\com\zpp\utils" />
       <recent name="D:\idea\博客\Blog\zpp-framework\src\main\java\com\zpp\config" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.zpp.filter" />
       <recent name="com.zpp.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BlogAdminApplication">
-    <configuration name="JwtUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zpp.utils.JwtUtil" />
+  <component name="RunManager" selected="Spring Boot.ZppBlogApplication">
+    <configuration name="Test01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test01" />
       <module name="zpp-framework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zpp.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -168,6 +170,10 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="zpp-blog-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/zpp-blog/target/zpp-blog-1.0-SNAPSHOT.jar" />
+      <method v="2" />
     </configuration>
     <configuration name="BlogAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="zpp-admin" />
@@ -197,10 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.BlogAdminApplication" />
         <item itemvalue="Spring Boot.ZppBlogApplication" />
+        <item itemvalue="Spring Boot.BlogAdminApplication" />
+        <item itemvalue="应用程序.Test01" />
+        <item itemvalue="JAR 应用程序.zpp-blog-1.0-SNAPSHOT.jar" />
         <item itemvalue="JUnit.OSSTest.testOss" />
-        <item itemvalue="应用程序.JwtUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -286,7 +293,18 @@
       <workItem from="1686183290974" duration="12845000" />
       <workItem from="1686212741281" duration="20810000" />
       <workItem from="1686286771824" duration="3987000" />
-      <workItem from="1686292208653" duration="5509000" />
+      <workItem from="1686292208653" duration="6136000" />
+      <workItem from="1686307303331" duration="3051000" />
+      <workItem from="1686393704147" duration="154000" />
+      <workItem from="1686397594187" duration="1296000" />
+      <workItem from="1686650962832" duration="554000" />
+      <workItem from="1686704771761" duration="1165000" />
+      <workItem from="1686795310166" duration="2607000" />
+      <workItem from="1686800902192" duration="369000" />
+      <workItem from="1686820969865" duration="932000" />
+      <workItem from="1687004140753" duration="9920000" />
+      <workItem from="1687070968830" duration="11875000" />
+      <workItem from="1687087166844" duration="1156000" />
     </task>
     <task id="LOCAL-00001" summary="变更">
       <created>1686023187302</created>
@@ -344,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686233624677</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="后台管理模块，用户、角色、菜单模块增删改功能未实现，权限校验未配置">
+      <created>1686297822936</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686297822937</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +426,8 @@
     <MESSAGE value="后台管理模块，实现了标签的增删改查，写博实现部分功能" />
     <MESSAGE value="后台管理模块，实现了友链的增删改查审核，代码优化。" />
     <MESSAGE value="后台管理模块，实现了分类的增删改查，写博文功能，文章分页查询：响应字段未完&quot;isComment  &quot;isTop,&quot;status等,。" />
-    <option name="LAST_COMMIT_MESSAGE" value="后台管理模块，实现了分类的增删改查，写博文功能，文章分页查询：响应字段未完&quot;isComment  &quot;isTop,&quot;status等,。" />
+    <MESSAGE value="后台管理模块，用户、角色、菜单模块增删改功能未实现，权限校验未配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台管理模块，用户、角色、菜单模块增删改功能未实现，权限校验未配置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -410,6 +436,20 @@
           <url>file://$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/domain/entity/Tag.java</url>
           <line>33</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zpp-admin/src/main/java/com/zpp/controller/CategoryController.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/zpp-framework/src/main/java/com/zpp/handler/execption/GlobalExceptionHandler.java</url>
+          <line>16</line>
+          <properties class="com.zpp.handler.execption.GlobalExceptionHandler" method="systemExceptionHandler">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

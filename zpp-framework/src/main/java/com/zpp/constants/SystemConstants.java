@@ -31,4 +31,5 @@ public class SystemConstants
     public static final String ARTICLE_VIEW_COUNT_KEY = "article:viewCount";
     /** 正常状态 */
     public static final String CATEGORY_NORMAL = "0";
+    public static final String ADMIN = "1";
 }

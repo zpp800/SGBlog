@@ -19,6 +19,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -31,7 +32,7 @@ import java.util.List;
 public class CategoryController {
     @Resource
     private CategoryService categoryService;
-    
+    @PreAuthorize("@zpp.hasPermission('content:article:writer')")
     @GetMapping("/listAllCategory")
     @ApiOperation(value = "写博文分类",notes = "写博文界面的选择分类")
     public ResponseResult listAllCategory(){
@@ -82,6 +83,7 @@ public class CategoryController {
         return ResponseResult.okResult("您已成功修改该分类");
     }
 
+
     @PostMapping
     @ApiOperation(value = "新增分类",notes = "增加分类")
     @SystemLog(businessName = "新增分类")
@@ -91,6 +93,7 @@ public class CategoryController {
     }
 
     //分类导出
+    @PreAuthorize("@zpp.hasPermission('content:category:export')")
     @GetMapping("/export")
     @ApiOperation(value = "导出分类",notes = "导出分类")
     public void export(HttpServletResponse response){

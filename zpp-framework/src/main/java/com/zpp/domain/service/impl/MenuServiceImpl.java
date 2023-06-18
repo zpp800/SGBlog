@@ -79,7 +79,10 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements Me
 
     private List<Menu> builderMenuTree(List<Menu> menus, Long parentId) {
         List<Menu> menuTree = menus.stream()
+                //转换成流，过滤处理后剩下一级菜单
                 .filter(menu -> menu.getParentId().equals(parentId))
+                //setChildren方法有返回值，开启了链式编程
+                //
                 .map(menu -> menu.setChildren(getChildren(menu, menus)))
                 .collect(Collectors.toList());
         return menuTree;
@@ -93,7 +96,14 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements Me
      */
     private List<Menu> getChildren(Menu menu, List<Menu> menus) {
         List<Menu> childrenList = menus.stream()
+                //过滤完之后就是子菜单
                 .filter(m -> m.getParentId().equals(menu.getId()))
+                //递归调用
+                //第一行的 filter 中判断了当前菜单是否存在子菜单，如果没有子菜单，
+                //就会结束递归。如果当前菜单有子菜单，就会继续执行。在第二行的 map 中，
+                //继续调用 getChildren 方法，用于获取当前菜单的子菜单列表。
+                //这一步会继续递归调用，直到所有菜单的子菜单都被找到为止。
+                //map找子菜单的子菜单
                 .map(m->m.setChildren(getChildren(m,menus)))
                 .collect(Collectors.toList());
         return childrenList;

@@ -1,8 +1,10 @@
 package com.zpp.domain.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.zpp.constants.SystemConstants;
 import com.zpp.domain.entity.LoginUser;
 import com.zpp.domain.entity.User;
+import com.zpp.domain.mapper.MenuMapper;
 import com.zpp.domain.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -11,6 +13,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.Objects;
 
 @Service
@@ -18,6 +21,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Resource
     private UserMapper userMapper;
+    @Resource
+    private MenuMapper menuMapper;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -31,6 +36,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         }
         //返回用户信息
         // TODO 查询权限信息封装
-        return new LoginUser(user);
+        if(user.getType().equals(SystemConstants.ADMIN)){
+            List<String> list = menuMapper.selectPermsByUserId(user.getId());
+            return new LoginUser(user,list);
+        }
+        return new LoginUser(user,null);
     }
 }

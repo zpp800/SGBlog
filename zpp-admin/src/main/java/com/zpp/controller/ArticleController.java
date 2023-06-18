@@ -15,6 +15,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -23,12 +24,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/content/article")
 @Api(tags = "文章相关接口")
-
+@PreAuthorize("@zpp.hasPermission('content:article:list')")
 public class ArticleController {
 
     @Resource
     private ArticleService articleService;
 
+    @PreAuthorize("@zpp.hasPermission('content:article:writer')")
     @PostMapping
     @ApiOperation(value = "新增文章",notes = "增加文章")
     @SystemLog(businessName = "新增文章")

@@ -15,6 +15,7 @@ import com.zpp.enums.AppHttpCodeEnum;
 import com.zpp.exception.SystemException;
 import com.zpp.utils.BeanCopyUtils;
 import com.zpp.utils.SecurityUtils;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,14 +26,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 public class LoginController {
-    @Autowired
-    private LoginService loginService;
-    @Autowired
-    private MenuService menuService;
 
-    @Autowired
-    private RoleService roleService;
+    private final LoginService loginService;
+    private final MenuService menuService;
+    private final RoleService roleService;
 
     @SystemLog(businessName = "管理后台登录")
     @PostMapping("/user/login")

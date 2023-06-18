@@ -14,6 +14,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -22,10 +23,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/content/tag")
 @Api(tags = "标签相关接口")
+@PreAuthorize("@zpp.hasPermission('content:tag:index')")
 public class TagController {
     @Resource
     private TagService tagService;
-
     @GetMapping("/listAllTag")
     @ApiOperation(value = "写博文标签",notes = "写博文界面的选择标签")
     public ResponseResult<TagVo> listAllTag(){

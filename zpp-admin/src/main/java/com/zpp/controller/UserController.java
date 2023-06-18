@@ -7,6 +7,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,9 +17,11 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/system/user")
 @Api(tags = "用户相关接口")
+@PreAuthorize("@zpp.hasPermission('system:user:list')")
 public class UserController {
     @Resource
     private UserService userService;
+    @PreAuthorize("@zpp.hasPermission('system:user:query')")
     @GetMapping("/list")
     @ApiOperation(value = "用户查询",notes = "用户查询")
     @ApiImplicitParams({

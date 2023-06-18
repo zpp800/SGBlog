@@ -13,6 +13,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -21,9 +22,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/content/link")
 @Api(tags = "友链相关接口")
+@PreAuthorize("@zpp.hasPermission('content:link:list')")
 public class LinkController {
     @Resource
     private LinkService linkService;
+    @PreAuthorize("@zpp.hasPermission('content:link:query')")
     @GetMapping("/list")
     @ApiOperation(value = "查询友链",notes = "查询友链")
     @ApiImplicitParams({
@@ -36,6 +39,7 @@ public class LinkController {
         return linkService.pageLinkList(pageNum,pageSize,name,status);
 
     }
+    @PreAuthorize("@zpp.hasPermission('content:link:remove')")
     @DeleteMapping("/{id}")
     @ApiOperation(value = "删除友链",notes = "删除友链")
     @SystemLog(businessName = "删除友链")
@@ -46,6 +50,7 @@ public class LinkController {
         return linkService.deleteLink(id);
     }
 
+    @PreAuthorize("@zpp.hasPermission('content:link:edit')")
     @GetMapping("/{id}")
     @ApiOperation(value = "单个友链查询",notes = "修改时需要回显友链,先查询")
     @SystemLog(businessName = "单个友链查询——修改友链")
@@ -58,6 +63,7 @@ public class LinkController {
         return ResponseResult.okResult(linkVo);
     }
 
+    @PreAuthorize("@zpp.hasPermission('content:link:edit')")
     @PutMapping
     @ApiOperation(value = "修改友链",notes = "修改友链")
     @SystemLog(businessName = "修改友链")
@@ -67,6 +73,7 @@ public class LinkController {
         return ResponseResult.okResult("您已成功修改该友链");
     }
 
+    @PreAuthorize("@zpp.hasPermission('content:link:add')")
     @PostMapping
     @ApiOperation(value = "新增友链",notes = "增加友链")
     @SystemLog(businessName = "新增友链")

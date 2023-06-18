@@ -11,6 +11,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -18,9 +19,11 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/system/role")
 @Api(tags = "角色相关接口")
+@PreAuthorize("@zpp.hasPermission('system:role:list')")
 public class RoleController {
     @Resource
     private RoleService roleService;
+    @PreAuthorize("@zpp.hasPermission('system:role:query')")
     @GetMapping("/list")
     @ApiOperation(value = "角色查询",notes = "角色查询")
     @ApiImplicitParams({
